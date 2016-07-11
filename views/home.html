@@ -1,0 +1,689 @@
+<meta charset="utf-8">
+<div id="homeCointer" ng-controller="homeCtrl">
+	<div class="title-date-range">
+	    <div class="row">
+	        <div class="col-md-6">
+	            <div class="main-title">
+	                <h1>Dashboard</h1>
+	                <h5>Welcome back, Labrina</h5><span><i class="fa fa-map-marker"></i>New York City</span>
+	            </div>
+	        </div>
+	        <div class="col-md-6">
+	            <div id="reportrange" class="date-range">
+	                <i class="fa fa-calendar-o"></i>
+	                <span></span> <b class="caret"></b>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- title Date Range -->
+	<div class="stats-counter-sec">
+	    <div class="top-margin">
+	        <div class="row">
+	            <div class="col-md-3">
+	                <div class="stats-counter">
+	                    <h3>访问量</h3>
+	                    <span>21,069</span>
+	                    <i class="fa fa-clock-o green"></i>
+	                    <h6>Total Visits : 9,34,001</h6>
+	                </div>
+	                <!-- Stats Counter -->
+	            </div>
+	            <div class="col-md-3">
+	                <div class="stats-counter">
+	                    <h3>New Signups</h3>
+	                    <span>1,346</span>
+	                    <i class="fa fa-user red"></i>
+	                    <h6>Total Users : 22,344</h6>
+	                </div>
+	                <!-- Stats Counter -->
+	            </div>
+	            <div class="col-md-3">
+	                <div class="stats-counter">
+	                    <div class="ribbon-wrapper">
+	                        <div class="ribbon-design blue">Today</div>
+	                    </div>
+	                    <h3>Todays Earning</h3>
+	                    <span>2,345</span>
+	                    <i class="fa fa-usd blue"></i>
+	                    <h6>Total Earning : $345,00</h6>
+	                </div>
+	                <!-- Stats Counter -->
+	            </div>
+	            <div class="col-md-3">
+	                <div class="stats-counter">
+	                    <h3>Real Visitors</h3>
+	                    <span id="random"></span>
+	                    <i class="fa  fa-area-chart gray"></i>
+	                    <h6>Total Visitors : 235,670</h6>
+	                </div>
+	                <!-- Stats Counter -->
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- Stats Counter Sec-->
+	<div class="row">
+	    <div class="masonary-grids">
+            <div class="col-md-12">
+                <div class="widget-area no-padding blank">
+                    <div data-ride="carousel" class="carousel slide" id="carousel-example-captions">
+                        <ol class="carousel-indicators">
+                            <li class="" data-slide-to="0" data-target="#carousel-example-captions"></li>
+                            <li data-slide-to="1" data-target="#carousel-example-captions" class=""></li>
+                            <li data-slide-to="2" data-target="#carousel-example-captions" class="active"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item">
+                                <img alt="" src="images/resource/slide11.jpg" />
+                                <div class="carousel-caption">
+                                    <h3>First slide label</h3>
+                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img alt="" src="images/resource/slide22.jpg" />
+                                <div class="carousel-caption">
+                                    <h3>Second slide label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class="item active">
+                                <img alt="" src="images/resource/slide33.jpg" />
+                                <div class="carousel-caption">
+                                    <h3>Third slide label</h3>
+                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a data-slide="prev" role="button" href="#carousel-example-captions" class="left carousel-control">
+                            <span class="fa fa-chevron-left"></span>
+                        </a>
+                        <a data-slide="next" role="button" href="#carousel-example-captions" class="right carousel-control">
+                            <span class="fa fa-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+	        <div class="col-md-6">
+	            <div class="widget-area no-padding blank">
+	                <div class="status-upload">
+	                    <form>
+	                        <textarea id="dynContent" placeholder="What are you doing right now?"></textarea>
+	                        <ul>
+	                            <li>
+	                                <a title="Picture" ng-click="showImg()">
+	                                    <i class="fa fa-picture-o"></i>
+	                                </a>
+	                                <div class="tooltip fade bottom in" role="tooltip" id="imgTip">
+	                                    <div class="tooltip-arrow"></div>
+	                                    <div class="tooltip-inner" >
+	                                        <div class="W_layer_con_tit">
+	                                        	<h5>本地上传</h5>
+	                                        	<h6 class="clearfix">
+	                                        		<span class="tit_txt W_fl">共
+	                                        		    <em>1</em>
+	                                        		    张,还能上传
+	                                        		    <em>8</em>
+	                                        		    张
+	                                        		</span>
+	                                        	</h6>
+	                                        </div>
+	                                        <ul class="drag_pic_list clearfix">
+	                                        	<li class="add" node-type="uploadBtn">
+	                                        		<a title="" href="javascript:0">+</a>
+	                                        		<div>
+													    <input type="file" id="imgFile" accept="image/*" class="img-file" name="">
+													</div>
+	                                        	</li>
+	                                        </ul>
+	                                        <div class="clear"></div>
+	                                    </div>
+                                    </div>
+	                            </li>
+	                            <li><a title="Audio" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-music"></i></a>
+	                            </li>
+	                            <li><a title="Video" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-video-camera"></i></a>
+	                            </li>
+	                            <li><a title="Sound Record" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-microphone"></i></a>
+	                            </li>
+	                        </ul>
+	                        <a class="btn green" ng-click="share()"><i class="fa fa-share"></i> Share</a>
+	                    </form>
+	                </div>
+	                <!-- Status Upload  -->
+	            </div>
+	            <!-- Widget Area -->
+	        </div>
+
+	        <div class="col-md-3">
+	            <div class="widget-area no-padding blank">
+	                <div class="social-widget">
+	                    <span id="fb"><i class="fa fa-facebook"></i></span>
+	                    <ul>
+	                        <li>
+	                            <p>1,265<i>Friends</i>
+	                            </p>
+	                        </li>
+	                        <li>
+	                            <p>235<i>Likes</i>
+	                            </p>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <!-- Social Widget -->
+	            </div>
+	            <!-- Widget Area -->
+	        </div>
+
+	        <div class="col-md-3">
+	            <div class="widget-area no-padding blank">
+	                <div class="social-widget">
+	                    <span id="twitter"><i class="fa fa-twitter"></i></span>
+	                    <ul>
+	                        <li>
+	                            <p>3,345<i>Tweets</i>
+	                            </p>
+	                        </li>
+	                        <li>
+	                            <p>984<i>Followers</i>
+	                            </p>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <!-- Social Widget -->
+	            </div>
+	            <!-- Widget Area -->
+	        </div>
+
+	        <div class="col-md-8">
+	            <div class="widget-area no-padding blank">
+	                <div class="panel panel-default work-progress-table">
+	                    <!-- Default panel contents -->
+	                    <div class="panel-heading">Lanbrina Scholar<i>My Work Progress</i>
+	                        <div class="btn-group">
+	                            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">Default <span class="caret"></span>
+	                            </button>
+	                            <ul role="menu" class="dropdown-menu">
+	                                <li><a href="#">Action</a>
+	                                </li>
+	                                <li><a href="#">Another action</a>
+	                                </li>
+	                                <li><a href="#">Something else here</a>
+	                                </li>
+	                                <li class="divider"></li>
+	                                <li><a href="#">Separated link</a>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- Table -->
+	                    <table class="table">
+	                        <thead>
+	                            <tr>
+	                                <th>#</th>
+	                                <th>Name</th>
+	                                <th>Progress</th>
+	                                <th>Status</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                            <tr>
+	                                <td>1</td>
+	                                <td>Mark</td>
+	                                <td>
+	                                    <div class="progress">
+	                                        <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+	                                            <span>60%</span>
+	                                        </div>
+	                                    </div>
+	                                </td>
+	                                <td>Pending..</td>
+	                            </tr>
+	                            <tr>
+	                                <td>2</td>
+	                                <td>Jacob</td>
+	                                <td>
+	                                    <div class="progress">
+	                                        <div style="width: 80%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="green progress-bar">
+	                                            <span>80%</span>
+	                                        </div>
+	                                    </div>
+	                                </td>
+	                                <td>Checking..</td>
+	                            </tr>
+	                            <tr>
+	                                <td>3</td>
+	                                <td>Larry</td>
+	                                <td>
+	                                    <div class="progress">
+	                                        <div style="width: 40%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="blue progress-bar">
+	                                            <span>40%</span>
+	                                        </div>
+	                                    </div>
+	                                </td>
+	                                <td>Working...</td>
+	                            </tr>
+	                            <tr>
+	                                <td>4</td>
+	                                <td>John Doe</td>
+	                                <td>
+	                                    <div class="progress">
+	                                        <div style="width: 90%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="gray progress-bar">
+	                                            <span>90%</span>
+	                                        </div>
+	                                    </div>
+	                                </td>
+	                                <td>Almost Done</td>
+	                            </tr>
+	                            <tr>
+	                                <td>5</td>
+	                                <td>Brandon Daril</td>
+	                                <td>
+	                                    <div class="progress">
+	                                        <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+	                                            <span>60%</span>
+	                                        </div>
+	                                    </div>
+	                                </td>
+	                                <td>Pending..</td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+	                </div>
+	                <!-- Table Progress -->
+	            </div>
+	            <!-- Widget Area -->
+	        </div>
+
+	        <div class="col-md-4">
+	            <div class="widget-area">
+	                <h2 class="widget-title"><strong>Activity</strong> Feed</h2>
+	                <ul class="panel-function">
+	                    <li class="dropdown">
+	                        <a role="button" data-toggle="dropdown" href="#"> <b class="caret"></b>
+	                        </a>
+	                        <ul class="dropdown-menu" role="menu">
+	                            <li role="presentation"><a title="" class="hide-btn"><i class="fa fa-minus"></i></a>
+	                            </li>
+	                            <li role="presentation"><a title="" class="close-sec"><i class="fa fa-close"></i></a>
+	                            </li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	                <!-- Panel Function -->
+	                <div class="widget">
+	                    <div class="activity-feed" id="activity-scroll">
+	                        <ul>
+	                            <li>
+	                                <span><i class="fa fa-upload green"></i></span>
+	                                <h3>New Upload</h3>
+	                                <p>New file <a href="#" title="">document.doc</a> uploaded to the cloud</p>
+	                                <i>2 min ago</i>
+	                            </li>
+	                            <li>
+	                                <span><i class="fa fa-file blue"></i></span>
+	                                <h3>New Document</h3>
+	                                <p>New document <a href="#" title="">lorem ipsum.txt</a> created</p>
+	                                <i>4 min ago</i>
+	                            </li>
+	                            <li>
+	                                <span><i class="fa fa-info red"></i></span>
+	                                <h3>Important Notification</h3>
+	                                <p>There is <a href="#" title="">Server 10</a> is not working Properly</p>
+	                                <i>1 hour ago</i>
+	                            </li>
+	                            <li>
+	                                <span><img src="images/resource/sender1.jpg" alt="" /></span>
+	                                <h3>New Upload</h3>
+	                                <p>New file <a href="#" title="">document.doc</a> uploaded to the cloud</p>
+	                                <i>today</i>
+	                            </li>
+	                            <li>
+	                                <span><i class="fa fa-info red"></i></span>
+	                                <h3>Important Notification</h3>
+	                                <p>There is <a href="#" title="">Server 10</a> is not working Properly</p>
+	                                <i>1 hour ago</i>
+	                            </li>
+	                            <li>
+	                                <span><img src="images/resource/sender1.jpg" alt="" /></span>
+	                                <h3>New Upload</h3>
+	                                <p>New file <a href="#" title="">document.doc</a> uploaded to the cloud</p>
+	                                <i>today</i>
+	                            </li>
+	                            <li>
+	                                <span><i class="fa fa-upload green"></i></span>
+	                                <h3>New Upload</h3>
+	                                <p>New file <a href="#" title="">document.doc</a> uploaded to the cloud</p>
+	                                <i>2 min ago</i>
+	                            </li>
+	                            <li>
+	                                <span><i class="fa fa-file blue"></i></span>
+	                                <h3>New Document</h3>
+	                                <p>New document <a href="#" title="">lorem ipsum.txt</a> created</p>
+	                                <i>4 min ago</i>
+	                            </li>
+	                            <li>
+	                                <span><i class="fa fa-info red"></i></span>
+	                                <h3>Important Notification</h3>
+	                                <p>There is <a href="#" title="">Server 10</a> is not working Properly</p>
+	                                <i>1 hour ago</i>
+	                            </li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="col-md-4">
+	            <div class="widget-area no-padding">
+	                <div class="my-profile-widget">
+	                    <div class="profile-widget-head">
+	                        <h3>Labrina Scholar</h3>
+	                        <i>Creative Designer</i>
+	                        <span><img src="images/resource/me.jpg" alt="" /></span>
+	                    </div>
+	                    <h4>@labrina_scholar</h4>
+	                    <span class="blue"><i class="fa fa-map-marker"></i>San Francisco</span>
+	                    <p>Print this page to PDF for te completet of vectors. Or to use othe the Font Aweo Awesome</p>
+	                    <a href="#" title="">http://themeforest.net</a>
+	                    <ul class="social-btns">
+	                        <li><a title="" href="#"><i class="fa fa-facebook"></i></a>
+	                        </li>
+	                        <li><a title="" href="#"><i class="fa fa-google-plus"></i></a>
+	                        </li>
+	                        <li><a title="" href="#"><i class="fa fa-twitter"></i></a>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <!-- My Profile Widget -->
+	            </div>
+	        </div>
+
+	        <div class="col-md-8">
+	            <div class="widget-area">
+	                <h2 class="widget-title"><strong>User</strong> Timeline</h2>
+	                <ul class="panel-function">
+	                    <li class="dropdown">
+	                        <a role="button" data-toggle="dropdown" href="#"> <b class="caret"></b>
+	                        </a>
+	                        <ul class="dropdown-menu" role="menu">
+	                            <li role="presentation"><a title="" class="hide-btn"><i class="fa fa-minus"></i></a>
+	                            </li>
+	                            <li role="presentation"><a title="" class="close-sec"><i class="fa fa-close"></i></a>
+	                            </li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	                <!-- Panel Function -->
+	                <div class="widget">
+	                    <div class="timeline-sec" id="timeline-scroll">
+	                        <ul>
+	                            <li>
+	                                <div class="timeline">
+	                                    <div class="user-timeline">
+	                                        <span><img src="images/resource/sender2.jpg" alt="" /></span>
+	                                    </div>
+	                                    <div class="timeline-detail">
+	                                        <div class="timeline-head">
+	                                            <h3>Jonathan Gardel<span>2 min ago</span><i class="red">Admin</i></h3>
+	                                            <div class="social-share">
+	                                                <a title=""><i class="fa fa-share-alt"></i></a>
+	                                                <ul class="social-btns">
+	                                                    <li><a title="Facebook" data-toggle="tooltip" data-placement="left" href="#"><i class="fa fa-facebook"></i></a>
+	                                                    </li>
+	                                                    <li><a title="Google" data-toggle="tooltip" data-placement="left" href="#"><i class="fa fa-google-plus"></i></a>
+	                                                    </li>
+	                                                    <li><a title="Twitter" data-toggle="tooltip" data-placement="left" href="#"><i class="fa fa-twitter"></i></a>
+	                                                    </li>
+	                                                </ul>
+	                                            </div>
+	                                        </div>
+	                                        <div class="timeline-content">
+	                                            <p>Set it as the font <a href="#" title="">John Doe</a> in your applition, and copy and paste the icons. Print this page.</p>
+	                                            <div class="progress w-tooltip">
+	                                                <div style="width: 70%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar" class="red progress-bar">
+	                                                    <span><i>uploading</i>70%</span>
+	                                                </div>
+	                                            </div>
+	                                            <div data-toggle="buttons" class="btn-group btn-group-sm">
+	                                                <label class="btn btn-default">
+	                                                    <input type="radio" checked="" name="options" /><i class="fa fa-comment-o"></i> Reply
+	                                                </label>
+	                                                <label class="btn btn-default">
+	                                                    <input type="radio" name="options" /> <i class="fa fa-thumbs-o-up"></i> Like
+	                                                </label>
+	                                            </div>
+	                                            <form class="post-reply">
+	                                                <textarea placeholder="Write your comment"></textarea>
+	                                                <i class="fa fa-comments-o"></i>
+	                                            </form>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </li>
+
+	                            <li>
+	                                <div class="timeline">
+	                                    <div class="user-timeline">
+	                                        <span><img src="images/resource/sender3.jpg" alt="" /></span>
+	                                    </div>
+	                                    <div class="timeline-detail">
+	                                        <div class="timeline-head">
+	                                            <h3>Yameen khandil<span>2 hours ago</span><i class="blue">Mod</i></h3>
+	                                            <div class="social-share">
+	                                                <a title=""><i class="fa fa-share-alt"></i></a>
+	                                                <ul class="social-btns">
+	                                                    <li><a title="Facebook" data-toggle="tooltip" data-placement="left" href="#"><i class="fa fa-facebook"></i></a>
+	                                                    </li>
+	                                                    <li><a title="Google" data-toggle="tooltip" data-placement="left" href="#"><i class="fa fa-google-plus"></i></a>
+	                                                    </li>
+	                                                    <li><a title="Twitter" data-toggle="tooltip" data-placement="left" href="#"><i class="fa fa-twitter"></i></a>
+	                                                    </li>
+	                                                </ul>
+	                                            </div>
+	                                        </div>
+	                                        <div class="timeline-content">
+	                                            <p>at <a href="#" title="">Khana Zidi</a> Jonathan DOe Uploaded 4 new photos.</p>
+	                                            <div class="timeline-gallery">
+	                                                <ul>
+	                                                    <li><a title="Gallery Image" class="html5lightbox" href="images/resource/view.gif"><i class="fa fa-search"></i><img src="images/resource/gallery1.jpg" alt="" /></a>
+	                                                    </li>
+	                                                    <li><a title="Gallery Image" class="html5lightbox" href="images/resource/view.gif"><i class="fa fa-search"></i><img src="images/resource/gallery2.jpg" alt="" /></a>
+	                                                    </li>
+	                                                    <li><a title="Gallery Image" class="html5lightbox" href="images/resource/view.gif"><i class="fa fa-search"></i><img src="images/resource/gallery3.jpg" alt="" /></a>
+	                                                    </li>
+	                                                    <li><a title="Gallery Image" class="html5lightbox" href="images/resource/view.gif"><i class="fa fa-search"></i><img src="images/resource/gallery4.jpg" alt="" /></a>
+	                                                    </li>
+	                                                </ul>
+	                                            </div>
+	                                            <div data-toggle="buttons" class="btn-group btn-group-sm">
+	                                                <label class="btn btn-default">
+	                                                    <input type="radio" checked="" name="options" /><i class="fa fa-comment-o"></i> Reply
+	                                                </label>
+	                                                <label class="btn btn-default">
+	                                                    <input type="radio" name="options" /> <i class="fa fa-thumbs-o-up"></i> Like
+	                                                </label>
+	                                            </div>
+	                                            <form class="post-reply">
+	                                                <textarea placeholder="Write your comment"></textarea>
+	                                                <i class="fa fa-comments-o"></i>
+	                                            </form>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </li>
+
+	                            <li>
+	                                <div class="timeline">
+	                                    <div class="user-timeline">
+	                                        <span><img src="images/resource/sender1.jpg" alt="" /></span>
+	                                    </div>
+	                                    <div class="timeline-detail">
+	                                        <div class="timeline-head">
+	                                            <h3>Brindal Dazi<span>4 min ago</span><i class="green">User</i></h3>
+	                                            <div class="social-share">
+	                                                <a title=""><i class="fa fa-share-alt"></i></a>
+	                                                <ul class="social-btns">
+	                                                    <li><a title="Facebook" data-toggle="tooltip" data-placement="left" href="#"><i class="fa fa-facebook"></i></a>
+	                                                    </li>
+	                                                    <li><a title="Google" data-toggle="tooltip" data-placement="left" href="#"><i class="fa fa-google-plus"></i></a>
+	                                                    </li>
+	                                                    <li><a title="Twitter" data-toggle="tooltip" data-placement="left" href="#"><i class="fa fa-twitter"></i></a>
+	                                                    </li>
+	                                                </ul>
+	                                            </div>
+	                                        </div>
+	                                        <div class="timeline-content">
+	                                            <p>Set it as the font <a href="#" title="">John Doe</a> in your applition, and copy and paste the icons. Print this page to PDF for te completet of vectors. Or to use othe the Font Aweo Awesome</p>
+	                                            <div data-toggle="buttons" class="btn-group btn-group-sm">
+	                                                <label class="btn btn-default">
+	                                                    <input type="radio" checked="" name="options" /><i class="fa fa-comment-o"></i> Reply
+	                                                </label>
+	                                                <label class="btn btn-default">
+	                                                    <input type="radio" name="options" /> <i class="fa fa-thumbs-o-up"></i> Like
+	                                                </label>
+	                                            </div>
+	                                            <form class="post-reply">
+	                                                <textarea placeholder="Write your comment"></textarea>
+	                                                <i class="fa fa-comments-o"></i>
+	                                            </form>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </li>
+
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+
+	    </div>
+	</div>		
+</div>
+
+<script type="text/javascript" src="js/admin/jquery.flot.min.js"></script>
+<script type="text/javascript">
+    function random_num(field, interval, range) {
+
+        setInterval(function() {
+            var chars = "0123456789";
+            var string_length = range;
+            var randomstring = '';
+            for (var i = 0; i < string_length; i++) {
+                var rnum = Math.floor(Math.random() * chars.length);
+                randomstring += chars.substring(rnum, rnum + 1);
+            }
+            var a = jQuery("#" + field).html(randomstring);
+            console.log(a);
+        }, interval);
+    };
+</script>
+<script>
+    jQuery(document).ready(function() {
+        random_num('random', 3000, 3);
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $(".carousal-sec").owlCarousel({
+            autoPlay: true,
+            stopOnHover: true,
+            goToFirstSpeed: 500,
+            slideSpeed: 500,
+            singleItem: true,
+            autoHeight: true,
+            transitionStyle: "backSlide",
+            navigation: true
+        });
+
+        $("#pie").sparkline([1, 1, 2], {
+            type: 'pie',
+            width: '40',
+            height: '40',
+            sliceColors: ['#2dcb73', '#fd6a59', '#17c3e5', '#109618', '#66aa00', '#dd4477', '#0099c6', '#990099 ']
+        });
+
+        $(function() {
+            $("#new-orders").sparkline([4, 5, 6, 7, 6, 5, 4, 3, 2, 2, 3, 4], {
+                type: 'bar',
+                height: '40px',
+                barSpacing: 3,
+                barWidth: 6,
+                barColor: '#2dcb73',
+                negBarColor: '#D6A838'
+            });
+        });
+
+        $(function() {
+            $("#new-sales").sparkline([2, 3, 4, 5, 2, 5, 6, 2, 8, 5, 1, 5], {
+                type: 'bar',
+                height: '40px',
+                barSpacing: 3,
+                barWidth: 6,
+                barColor: '#ff604f',
+                negBarColor: '#D6A838'
+            });
+        });
+
+        $(function() {
+            $("#new-visitors").sparkline([6, 5, 3, 1, 4, 5, 6, 7, 3, 2, 3, 8], {
+                type: 'bar',
+                height: '40px',
+                barSpacing: 3,
+                barWidth: 6,
+                barColor: '#17c3e5',
+                negBarColor: '#D6A838'
+            });
+        });
+
+        $('#reportrange').daterangepicker({
+                startDate: moment().subtract('days', 29),
+                endDate: moment(),
+                minDate: '01/01/2012',
+                maxDate: '12/31/2014',
+                dateLimit: {
+                    days: 60
+                },
+                showDropdowns: true,
+                showWeekNumbers: true,
+                timePicker: false,
+                timePickerIncrement: 1,
+                timePicker12Hour: true,
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                    'Last 7 Days': [moment().subtract('days', 6), moment()],
+                    'Last 30 Days': [moment().subtract('days', 29), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                },
+                opens: 'left',
+                buttonClasses: ['btn btn-default'],
+                applyClass: 'btn-small btn-primary',
+                cancelClass: 'btn-small',
+                format: 'MM/DD/YYYY',
+                separator: ' to ',
+                locale: {
+                    applyLabel: 'Submit',
+                    fromLabel: 'From',
+                    toLabel: 'To',
+                    customRangeLabel: 'Custom Range',
+                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    firstDay: 1
+                }
+            },
+            function(start, end) {
+                console.log("Callback has been called!");
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            }
+        );
+        //Set the initial state of the picker label
+        $('#reportrange span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+    });
+</script>
+<script type="text/javascript" src="js/admin/chart-line-and-graph.js"></script>

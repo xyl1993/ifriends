@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" ng-app="dlMain">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Questions Bank | Login Page</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="小夏" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/css/assets/animate.min.css" rel="stylesheet" />
+	<link href="/css/assets/style.min.css" rel="stylesheet" />
+	<link href="/css/assets/style-responsive.min.css" rel="stylesheet" />
+	<link href="/css/assets/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+</head>
+<body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<div class="login-cover">
+	    <div class="login-cover-image"><img src="/images/assets/login-bg/bg-1.jpg" data-id="login-cover-image" alt="" /></div>
+	    <div class="login-cover-bg"></div>
+	</div>
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade">
+	    <!-- begin login -->
+        <div class="login login-v2" data-pageload-addclass="animated flipInX">
+            <!-- begin brand -->
+            <div class="login-header">
+                <div class="brand">
+                    <span class="logo"></span> Questions Bank
+                    <small>IDENTIFY YOURSELF</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-sign-in" ui-sref="/denglu"></i>
+                </div>
+            </div>
+            <!-- end brand -->
+            <div class="login-content" ui-view>
+                
+            </div>
+            <ul class="reg-social-btns">
+                <li><a href="#" title=""><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="#" title=""><i class="fa fa-twitter"></i></a>
+                </li>
+                <li><a href="#" title="" onclick="oauthLogin('github')"><i class="fa fa-github"></i></a>
+                </li>
+                <li><a href="#" title=""><i class="fa fa-google-plus"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- end login -->
+        
+        <ul class="login-bg-list">
+            <li class="active"><a href="#" data-click="change-bg"><img src="images/assets/login-bg/bg-1.jpg" alt="" /></a></li>
+            <li><a href="#" data-click="change-bg"><img src="/images/assets/login-bg/bg-2.jpg" alt="" /></a></li>
+            <li><a href="#" data-click="change-bg"><img src="/images/assets/login-bg/bg-3.jpg" alt="" /></a></li>
+            <li><a href="#" data-click="change-bg"><img src="/images/assets/login-bg/bg-4.jpg" alt="" /></a></li>
+            <li><a href="#" data-click="change-bg"><img src="images/assets/login-bg/bg-5.jpg" alt="" /></a></li>
+            <li><a href="#" data-click="change-bg"><img src="images/assets/login-bg/bg-6.jpg" alt="" /></a></li>
+        </ul>
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery-migrate-1.2.1.js"></script>
+	<script src="/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+	<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script src="/slimscroll/jquery.slimscroll.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="/js/assjs/login-v2.demo.min.js"></script>
+	<script src="/js/assjs/apps.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+        
+	<script src="/my-javascript/util/util.js"></script>
+	<script>
+		$(document).ready(function() {
+			App.init();
+			LoginV2.init();
+		});
+		function oauthLogin(type){
+			if(type=='github'){
+				location.href="https://github.com/login/oauth/authorize?client_id=43310f09cfc0fb9b953f&redirect_uri=https://ifriends-crossed.rhcloud.com/login#/denglu";
+			}
+		}
+		var code = getQueryString('code');
+		if(code){
+			$.ajax({
+				url: 'https://github.com/login/oauth/access_token?client_id=43310f09cfc0fb9b953f&client_secret=0255631d4f8266f2e30460f3f8f5ff4a4c6c299d&code='+code,
+				type: 'POST'
+			}).success(function(res){
+                console.log(res);
+			})
+			
+		}
+	</script>
+	<!-- angularjs -->
+	<script type="text/javascript" src="/js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="/js/angular-resource.min.js"></script>
+
+    <script type="text/javascript" src="/js/base64.js"></script>
+    <!-- my js -->
+	<script src="/my-javascript/util/const.js"></script>
+	<script src="/my-javascript/login/login.js"></script>
+</body>
+</html>
+

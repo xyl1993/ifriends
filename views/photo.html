@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<div ng-controller="photoCtrl">
+    <div class="title-date-range">
+	    <div class="row">
+	        <div class="col-md-6">
+	            <div class="main-title">
+	                <h1>Gallery Static</h1>
+	                <h5>Welcome back, Labrina</h5><span><i class="fa fa-map-marker"></i>New York City</span>
+	            </div>
+	        </div>
+	        <div class="col-md-6">
+	        </div>
+	    </div>
+	</div>
+	<!-- title Date Range -->
+	<div class="gallery-static">
+	    <div class="row">
+	        <div class="col-md-4" ng-repeat="imgData in imgDatas">
+	            <div class="image-gallery">
+	                <div class="thumb">
+	                    <img ng-src="{{imgData.url}}" alt="" />
+	                    <h3 ng-bind-template="{{imgData.content}}"></h3>
+	                    <i class="fa fa-bolt"></i>
+	                    <a title="Gallery Image" class="html5lightbox" ng-click="photoSee(imgData)"><i class="fa fa-search"></i></a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="modal fade bs-example-modal-lg" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	      <img ng-src="{{seeImg}}" alt="" />
+	      <div ng-bind-template="{{imgText}}"></div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+
+

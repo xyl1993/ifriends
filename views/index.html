@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" ng-app="mainModule">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" media="all" href="/css/daterangepicker-bs3.css" />
+    <!-- Date Range Picker -->
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/jquery.Jcrop.min.css" type="text/css" />
+    <!-- JCrop -->
+    <link rel="stylesheet" href="/css/jquery-jvectormap.css" type="text/css" />
+    <!-- Vector Map -->
+    <link rel="stylesheet" href="/css/owl.carousel.css" type="text/css" />
+    <!-- Carousal -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="/css/responsive.css" type="text/css" />
+    <!-- Responsive -->
+</head>
+
+<body>
+
+    <div class="main" ng-controller="mainCtrl">
+        <div id="live-chat">
+            <div class="clearfix gray chat-header">
+                <a href="#" class="chat-close">-</a>
+                <h4>Labrina Scholar</h4>
+                <span class="chat-message-counter">3</span>
+            </div>
+            <div class="chat" style="display:none;">
+                <div class="chat-history">
+                    <div class="chat-message">
+                        <img src="images/resource/sender1.jpg" alt="" width="32" height="32" />
+                        <div class="chat-message-content">
+                            <span class="chat-time">11:54</span>
+                            <h5>John Doe</h5>
+                            <p>Lorem ipsum dolor. Error, explicabo quasi ratione odio dolorum harum.</p>
+                        </div>
+                        <!-- end chat-message-content -->
+                    </div>
+                    <!-- end chat-message -->
+                    <div class="chat-message">
+                        <img src="images/resource/sender2.jpg" alt="" width="32" height="32" />
+                        <div class="chat-message-content">
+                            <span class="chat-time">12:43</span>
+                            <h5>Marco Biedermann</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <!-- end chat-message-content -->
+                    </div>
+                    <!-- end chat-message -->
+                    <div class="chat-message">
+                        <img src="images/resource/sender1.jpg" alt="" width="32" height="32" />
+                        <div class="chat-message-content">
+                            <span class="chat-time">12:23</span>
+                            <h5>John Doe</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                        <!-- end chat-message-content -->
+                    </div>
+                    <!-- end chat-message -->
+                </div>
+                <!-- end chat-history -->
+                <p class="chat-feedback">Your partner is typing… <img src="images/typing-loading.gif" alt="" />
+                </p>
+                <form action="#" method="post">
+                    <fieldset>
+                        <input type="text" placeholder="Type your message…" autofocus>
+                        <input type="hidden">
+                    </fieldset>
+                </form>
+            </div>
+            <!-- end chat -->
+        </div>
+        <!-- end live-chat -->
+
+        <header class="header">
+            <div class="logo">
+                <a href="dashboard.html" title=""><img src="images/logo2.png" alt="" />
+                </a>
+                <a title="" class="toggle-menu"><i class="fa fa-bars"></i></a>
+            </div>
+            <form class="search opacity">
+                <input type="text" placeholder="Search..." />
+                <button type="button"><i class="fa fa-search"></i>
+                </button>
+            </form>
+            <div class="custom-dropdowns">
+                <div class="message-list dropdown">
+                    <a title=""><span class="blue">4</span><i class="fa fa-envelope-o"></i></a>
+                    <div class="message drop-list">
+                        <span>You have 4 New Messages</span>
+                        <ul>
+                            <li>
+                                <a href="#" title=""><span><img src="images/resource/sender1.jpg" alt="" /></span><i>Labrina Scholer</i>Hi! How are you?...<h6>2 min ago..</h6><p class="status blue">New</p></a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><span><img src="images/resource/sender2.jpg" alt="" /></span><i>Jonathan</i>Hi! How are you?...<h6>2 min ago..</h6><p class="status red">Unsent</p></a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><span><img src="images/resource/sender3.jpg" alt="" /></span><i>Barada knol</i>Hi! How are you?...<h6>2 min ago..</h6><p class="status green">Reply</p></a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><span><img src="images/resource/sender4.jpg" alt="" /></span><i>Samtha Gee</i>Hi! How are you?...<h6>2 min ago..</h6><p class="status">New</p></a>
+                            </li>
+                        </ul>
+                        <a href="inbox.html" title="">See All Messages</a>
+                    </div>
+                </div>
+                <!-- Message List -->
+                <div class="notification-list dropdown">
+                    <a title=""><span class="green">3</span><i class="fa fa-bell-o"></i></a>
+                    <div class="notification drop-list">
+                        <span>You have 3 New Notifications</span>
+                        <ul>
+                            <li>
+                                <a href="#" title=""><span><i class="fa fa-bug red"></i></span>Server 3 is Over Loader Please Check... <h6>2 min ago..</h6></a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><span><img src="images/resource/sender2.jpg" alt="" /></span><i>MD Daisal</i>New User Registered<h6>4 min ago..</h6><p class="status red">Urgent</p></a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><span><i class="fa fa-bullhorn green"></i></span>Envato Has change the policies<h6>7 min ago..</h6></a>
+                            </li>
+                        </ul>
+                        <a href="#" title="">See All Notifications</a>
+                    </div>
+                </div>
+                <!-- Notification List -->
+                <div class="activity-list dropdown">
+                    <a title=""><span class="red">4</span><i class="fa fa-clock-o"></i></a>
+                    <div class="activity drop-list">
+                        <span>Recent Activity</span>
+                        <ul>
+                            <li>
+                                <a href="#" title=""><span><img src="images/resource/sender2.jpg" alt="" /></span><i>Jona Than</i>Uploading new files<h6>2 min ago..</h6><p class="status green">Online</p></a>
+                                <div class="progress">
+                                    <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar blue">
+                                        60%
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" title=""><span><img src="images/resource/sender1.jpg" alt="" /></span><i>Bela Nisaa</i>Downloading new Documents<h6>2 min ago..</h6></a>
+                                <div class="progress">
+                                    <div style="width: 34%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="34" role="progressbar" class="progress-bar red">
+                                        34%
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" title="">See All Activity</a>
+                    </div>
+                </div>
+                <!-- Activity List -->
+            </div>
+            <a title="" class="slide-panel-btn"><i class="fa fa-gear fa-spin"></i></a>
+            <div class="dropdown profile">
+                <a title="">
+                    <img src="images/resource/me.jpg" alt="" />{{userData.username}}<i class="caret"></i>
+                </a>
+                <div class="profile drop-list">
+                    <ul>
+                        <li><a ui-sref="uploadCrop" title=""><i class="fa fa-edit"></i> 修改头像</a>
+                        </li>
+                        <li><a href="#" title=""><i class="fa fa-wrench"></i> Setting</a>
+                        </li>
+                        <li><a href="profile.html" title=""><i class="fa fa-user"></i> Profile</a>
+                        </li>
+                        <li><a href="faq.html" title=""><i class="fa fa-info"></i> Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Profile DropDown -->
+
+            </div>
+        </header>
+        <!-- Header -->
+        <div class="page-container menu-left">
+            <aside class="sidebar">
+                <div class="profile-stats">
+                    <div class="mini-profile">
+                        <span><img src="images/resource/me.jpg" alt="" /></span>
+                        <h3 ng-bind="userData.username"></h3>
+                        <h6 class="status online"><i></i> Online</h6>
+                        <a title="Logout" class="logout red" data-toggle="tooltip" data-placement="right" logout><i class="fa fa-power-off"></i></a>
+                    </div>
+                    <div class="quick-stats">
+                        <h5>Today Report</h5>
+                        <ul>
+                            <li><span>456<i>Sales</i></span>
+                            </li>
+                            <li><span>2,345<i>Order</i></span>
+                            </li>
+                            <li><span>$120<i>Revenue</i></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-sec">
+                    <div id="menu-toogle" class="menus">
+                        <div class="single-menu">
+                            <h2><a ui-sref="home" title=""><i class="fa fa-home"></i><span>个人主页</span></a></h2>
+                        </div>
+                        <div class="single-menu">
+                            <h2><a ui-sref="friend" title=""><i class="fa fa-group"></i><span>我的好友</span></a></h2>
+                        </div>
+                        <div class="single-menu">
+                            <h2><a ui-sref="photo" title=""><i class="fa fa-heart"></i><span>个人相册</span></a></h2>
+                        </div>
+                    </div>
+                    <p>2014 Copyright Azan by <a href="http://themeforest.net/user/themenum/portfolio?ref=themenum" title="">Themenum</a>
+                    </p>
+                </div>
+                <!-- Menu Sec -->
+            </aside>
+            <!-- Aside Sidebar -->
+            <div class="content-sec">
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="dashboard.html" title=""><i class="fa fa-home"></i></a>/</li>
+                        <li><a title="">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- breadcrumbs -->
+                <div class="container" ui-view>
+                    
+                </div>
+            </div>
+            <!-- Content Sec -->
+            <div class="slide-panel" id="panel-scroll">
+                <ul role="tablist" class="nav nav-tabs panel-tab-btn">
+                    <li class="active"><a data-toggle="tab" role="tab" href="#tab1"><i class="fa fa-inbox"></i><span>Your Emails</span></a>
+                    </li>
+                    <li><a data-toggle="tab" role="tab" href="#tab2"><i class="fa fa-group"></i><span>Your Setting</span></a>
+                    </li>
+                </ul>
+                <div class="tab-content panel-tab">
+                    <div id="tab1" class="tab-pane fade in active">
+                        <div class="recent-mails-widget">
+                            <form>
+                                <div id="searchMail"></div>
+                            </form>
+                            <h3>Recent Emails</h3>
+                            <ul id="mail-list" class="mail-list email-list">
+                                <li>
+                                    <div class="title">
+                                        <span><img src="images/resource/sender1.jpg" alt="" /><i class="online"></i></span>
+                                        <h3><a href="#" title="">Kim Hostwood</a><span>5 min ago</span></h3>
+                                        <a href="#" data-toggle="tooltip" data-placement="left" title="Attachment"><i class="fa fa-paperclip"></i></a>
+                                    </div>
+                                    <h4>Themeforest Admin Template</h4>
+                                    <p>This product is so good that i manage to buy it 1 for me and 3 for my families.</p>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <span><img src="images/resource/sender2.jpg" alt="" /><i class="online"></i></span>
+                                        <h3><a href="#" title="">John Doe</a><span>2 hours ago</span></h3>
+                                        <a href="#" data-toggle="tooltip" data-placement="left" title="Attachment"><i class="fa fa-paperclip"></i></a>
+                                    </div>
+                                    <h4>Themeforest Admin Template</h4>
+                                    <p>This product is so good that i manage to buy it 1 for me and 3 for my families.</p>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                        <span><img src="images/resource/sender3.jpg" alt="" /><i class="offline"></i></span>
+                                        <h3><a href="#" title="">Jonathan Doe</a><span>8 min ago</span></h3>
+                                        <a href="#" data-toggle="tooltip" data-placement="left" title="Attachment"><i class="fa fa-paperclip"></i></a>
+                                    </div>
+                                    <h4>Themeforest Admin Template</h4>
+                                    <p>This product is so good that i manage to buy it 1 for me and 3 for my families.</p>
+                                </li>
+                            </ul>
+                            <a href="inbox.html" title="" class="red">View All Messages</a>
+                        </div>
+                        <!-- Recent Email Widget -->
+
+                        <div class="file-transfer-widget">
+                            <h3>FILE TRANSFER <i class="fa fa-angle-down"></i></h3>
+                            <div class="toggle">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-file-excel-o"></i>
+                                        <h4>my-excel.xls<i>20 min ago</i></h4>
+                                        <div class="progress">
+                                            <div style="width: 90%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar red">
+                                                90%
+                                            </div>
+                                        </div>
+                                        <div class="file-action-btn">
+                                            <a href="#" title="Approve" class="green" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-check"></i></a>
+                                            <a href="#" title="Cancel" class="red" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-close"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-file-pdf-o"></i>
+                                        <h4>my-cv.pdf<i>8 min ago</i></h4>
+                                        <div class="progress">
+                                            <div style="width: 40%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar blue">
+                                                40%
+                                            </div>
+                                        </div>
+                                        <div class="file-action-btn">
+                                            <a href="#" title="Approve" class="green" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-check"></i></a>
+                                            <a href="#" title="Cancel" class="red" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-close"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-file-video-o"></i>
+                                        <h4>portfolio-shoot.mp4<i>12 min ago</i></h4>
+                                        <div class="progress">
+                                            <div style="width: 70%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar" class="progress-bar green">
+                                                70%
+                                            </div>
+                                        </div>
+                                        <div class="file-action-btn">
+                                            <a href="#" title="Approve" class="green" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-check"></i></a>
+                                            <a href="#" title="Cancel" class="red" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-close"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- File Transfer -->
+                    </div>
+                    <div id="tab2" class="tab-pane fade" ng-controller="addFrindCtrl">
+                        <div class="setting-widget">
+                            <form class="search">
+                                <input type="text" placeholder="Search..." ng-model="search.username"/>
+                                <button type="button" ng-click="search()"><i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                            <ul class="mail-list add-list">
+                                <li>
+                                    <div ng-show="flag" class="err-search-friend">未找到用户</div>
+                                    <div class="title" ng-repeat="friend in friendDatas">
+                                        <span><img src="images/resource/sender1.jpg" alt="" /><i class="online"></i></span>
+                                        <h3><a href="#" title="" ng-bind="friend.username"></a><span>5 min ago</span></h3>
+                                        <a data-toggle="tooltip" ng-show="!isFriend" data-placement="left" title="Add"><i class="fa fa-plus" ng-click="add(friend.id)" ng-show="!isFriend"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Setting Widget -->
+                    </div>
+                </div>
+            </div>
+            <!-- Slide Panel -->
+        </div>
+        <!-- Page Container -->
+    </div>
+    <!-- main -->
+
+    <!-- dialog start  -->
+
+    <!-- dialog end  -->
+
+    <!-- Script -->
+    <script type="text/javascript" src="js/admin/modernizr.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script><!-- $.browser这个api从jQuery1.9开始就正式废除 -->
+    <script type="text/javascript" src="js/admin/script.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/admin/enscroll.js"></script>
+    <script type="text/javascript" src="js/admin/daterangepicker.js"></script>
+    <script type="text/javascript" src="js/admin/moment.js"></script>
+    <script type="text/javascript" src="js/admin/grid-filter.js"></script>
+    <script type="text/javascript" src="js/admin/jquery.Jcrop.min.js"></script>
+    <!-- <script type="text/javascript" src="js/admin/jquery-jvectormap.js"></script> -->
+    <!-- <script type="text/javascript" src="js/admin/jquery-jvectormap-world-en.js"></script> -->
+    <script type="text/javascript" src="js/admin/gdp-data.js"></script>
+    <!-- <script type="text/javascript" src="js/admin/chart-line-and-graph.js"></script> -->
+    <!-- <script type="text/javascript" src="js/admin/jquery.flot.min.js"></script> -->
+    <script type="text/javascript" src="js/admin/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="js/admin/owl.carousel.min.js"></script>
+    <!-- <script type="text/javascript" src="js/admin/html5lightbox.js"></script> -->
+
+    <!-- angularjs -->
+    <script type="text/javascript" src="/js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="/js/angular-resource.min.js"></script>
+
+    <script type="text/javascript" src="/js/base64.js"></script>
+    <!-- my js -->
+    <script src="/my-javascript/util/util.js"></script>
+    <script src="/my-javascript/util/const.js"></script>
+    <script src="/my-javascript/index.js"></script>
+    <script src="/my-javascript/home.js"></script>
+    <script src="my-javascript/friend.js"></script>
+    <script src="my-javascript/photo.js"></script>
+    <script src="my-javascript/uploadCrop.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<meta charset="utf-8">
+<div ng-controller = "cropCtrl">
+	<div class="title-date-range">
+	    <div class="row">
+	        <div class="col-md-6">
+	            <div class="main-title">
+	                <h1>Upload Crop</h1>
+	                <h5>Welcome back, Labrina</h5><span><i class="fa fa-map-marker"></i>New York City</span>
+	            </div>
+	        </div>
+	        <div class="col-md-6">
+	        </div>
+	    </div>
+	</div>
+	<!-- title Date Range -->
+	<div class="row">
+	    <div class="masonary-grids">
+	        <div class="col-md-12">
+	            <div class="widget-area">
+	                <div class="image-crop">
+	                    <div class="bheader">
+	                        <h2>-- Image upload form --</h2>
+	                    </div>
+	                    <div class="bbody">
+	                        <!-- upload form -->
+	                        <form id="upload_form" enctype="multipart/form-data">
+	                            <!-- hidden crop params -->
+	                            <input type="hidden" id="x1" name="x1" />
+	                            <input type="hidden" id="y1" name="y1" />
+	                            <input type="hidden" id="x2" name="x2" />
+	                            <input type="hidden" id="y2" name="y2" />
+
+	                            <h2>Step1: Please select image file</h2>
+	                            <div>
+	                                <input type="file" name="image_file" id="image_file" onChange="fileSelectHandler()" />
+	                            </div>
+
+	                            <div class="error"></div>
+
+	                            <div class="step2">
+	                                <h2>Step2: Please select a crop region</h2>
+	                                <img id="preview"/>
+
+	                                <div class="info">
+	                                    <label>File size
+	                                        <input type="text" id="filesize" name="filesize" />
+	                                    </label>
+	                                    <label>Type
+	                                        <input type="text" id="filetype" name="filetype" />
+	                                    </label>
+	                                    <label>Image dimension
+	                                        <input type="text" id="filedim" name="filedim" />
+	                                    </label>
+	                                    <label>W
+	                                        <input type="text" id="w" name="w" />
+	                                    </label>
+	                                    <label>H
+	                                        <input type="text" id="h" name="h" />
+	                                    </label>
+	                                    <input type="text" hidden id="imgUrl"  />
+	                                </div>
+
+	                                <a class="btn" ng-click="uploadfile()">提交</a>
+	                            </div>
+	                        </form>
+	                    </div>
+	                </div>
+	                <!-- Image Crop -->
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>
